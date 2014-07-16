@@ -8,7 +8,7 @@ https://play.google.com/store/apps/details?id=com.mirko.sample&hl=it
 
 ![GoogleDateTimePicker](https://github.com/Mirkoddd/GoogleDateTimePickers/raw/master/extras/image_1.png)
 
-## What I do
+## What have I done
 
 1. change to one maven project(pom.xml configuration stolen from [here](https://github.com/square/android-times-square))
 1. use android-support-v4 for compatibility
