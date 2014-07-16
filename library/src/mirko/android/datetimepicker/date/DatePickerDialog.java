@@ -223,6 +223,9 @@ public class DatePickerDialog extends DialogFragment implements
         }
         mMonthAndDayView.setOnClickListener(this);
         mSelectedMonthTextView = (TextView) view.findViewById(R.id.date_picker_month);
+        if(mSelectedMonthTextView == null) {
+            Log.i(TAG, "mSelectedMonthTextView is null onCreateView");
+        }
         mSelectedDayTextView = (TextView) view.findViewById(R.id.date_picker_day);
         mYearView = (TextView) view.findViewById(R.id.date_picker_year);
         mYearView.setOnClickListener(this);
@@ -340,6 +343,11 @@ public class DatePickerDialog extends DialogFragment implements
         if (mDayOfWeekView != null) {
             mDayOfWeekView.setText(mCalendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG,
                     Locale.getDefault()).toUpperCase(Locale.getDefault()));
+        }
+
+
+        if(mSelectedMonthTextView == null) {
+            Log.i(TAG, "mSelectedMonthTextView is null updateDisplay");
         }
 
         mSelectedMonthTextView.setText(mCalendar.getDisplayName(Calendar.MONTH, Calendar.SHORT,
